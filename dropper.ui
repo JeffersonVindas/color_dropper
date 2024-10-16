@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>240</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Color Extractor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="icon" resource="icon_resource.qrc">
+    <normaloff>:/img/icon.png</normaloff>:/img/icon.png</iconset>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="rgb_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RGB</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="hex_label">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hex</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="color_block">
+  <property name="geometry">
+    <rect>
+      <x>125</x>
+      <y>20</y>
+      <width>50</width>
+      <height>50</height>
+    </rect>
+  </property>
+</widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>90</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="rgb_layout">
+     <item>
+      <widget class="QLabel" name="rgb_value">
+       <property name="text">
+        <string>000,000,000</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>130</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="hex_layout">
+     <item>
+      <widget class="QLabel" name="hex_value">
+       <property name="text">
+        <string>000000</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>300</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="icon_resource.qrc">
+     <normaloff>:/img/folder_icon.png</normaloff>:/img/folder_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="icon_resource.qrc">
+     <normaloff>:/img/exit_icon.png</normaloff>:/img/exit_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icon_resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
